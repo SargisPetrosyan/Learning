@@ -13,7 +13,7 @@ class Car(Vehicle):
         self.name = "Car"
 
     def model(self) -> str:
-        return 'BMW'
+        return "BMW"
 
 
 class Motobike(Vehicle):
@@ -21,21 +21,18 @@ class Motobike(Vehicle):
         self.name = "Motobike"
 
     def model(self) -> str:
-        return 'Mercedes'
-        
+        return "Mercedes"
 
 
 class VehicleFactory:
     @staticmethod
     def create_vehicle(vehicle_type: str) -> Vehicle:
-        vehicles = {
-            "Car": Car,
-            "Motobike": Motobike
-        }
+        vehicles = {"Car": Car, "Motobike": Motobike}
         if vehicle_type in vehicles:
             return vehicles[vehicle_type]()
         else:
             raise ValueError(f"Unknown vehicles {vehicle_type}")
+
 
 if __name__ == "__main__":
     choice = input("What type of vehicle do you want to create? ")
