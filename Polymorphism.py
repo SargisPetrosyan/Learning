@@ -1,6 +1,8 @@
 from abc import ABC
 
-'''Polimorphism is using same function for handle differnet purpose'''
+"""Polimorphism is using same function for handle differnet purpose"""
+
+
 class Vehicle(ABC):
     @classmethod
     def drive(self, car_model: str) -> None: ...
