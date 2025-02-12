@@ -99,7 +99,7 @@ def dict_func():
     print(dict(contenier_1))
 
 
-# dir() is giivong methods and names of that file
+# dir() is giving methods and names of that file
 def dir_func() -> None:
     print(dir(json))
 
@@ -172,14 +172,12 @@ def help_func():
     help(print)
 
 
-"""
-func() is returning object ID number 
-each obect hase uniqe id number even they have same volue:
-ID for each obecj is different 
-"""
-
-
 def id_func() -> None:
+    """
+    func() is returning object ID number
+    each obect hase uniqe id number even they have same volue:
+    ID for each obecj is different
+    """
     list_1: list[int] = [1, 2, 3, 4]
     list_2: list[int] = [1, 2, 3, 4]
 
