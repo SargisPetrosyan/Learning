@@ -1,40 +1,40 @@
 class InventoryItem:
-    def __init__(self, name, quentity) -> None:
+    def __init__(self, name, quantity) -> None:
         self.name = name
-        self.quentity = quentity
+        self.quantity = quantity
 
     def __str__(self) -> str:
-        return f"name:{self.name} and quentity:{self.quentity}"
+        return f"name:{self.name} and quantity:{self.quantity}"
 
     def __repr__(self) -> str:
-        return f"InventoryItem(name = {self.name}, quentity = {self.quentity})"
+        return f"InventoryItem(name = {self.name}, quantity = {self.quantity})"
 
     def __add__(self, other: object):
         if isinstance(other, InventoryItem) and self.name == other.name:
-            return InventoryItem(self.name, self.quentity + other.quentity)
-        raise ValueError("cannot add items of tifferent types")
+            return InventoryItem(self.name, self.quantity + other.quantity)
+        raise ValueError("cannot add items of different types")
 
     def __sub__(self, other: object):
         if isinstance(other, InventoryItem) and self.name == other.name:
-            if self.quentity >= other.quentity:
-                return InventoryItem(self.name, self.quentity - other.quentity)
-            raise ValueError("cannot subtract more than available quentity")
-        raise ValueError("cannot add items of tifferent types")
+            if self.quantity >= other.quantity:
+                return InventoryItem(self.name, self.quantity - other.quantity)
+            raise ValueError("cannot subtract more than available quantity")
+        raise ValueError("cannot add items of different types")
 
     def __mul__(self, factor):
         if isinstance(factor, (int, float)):
-            return InventoryItem(self.name, int(self.quentity * factor))
+            return InventoryItem(self.name, int(self.quantity * factor))
         raise ValueError("Multiplication factor must be number")
 
     def __eq__(self, other: object) -> bool:
         if isinstance(other, InventoryItem):
-            return self.name == other.name and self.quentity == other.quentity
+            return self.name == other.name and self.quantity == other.quantity
         return False
 
     def __gt__(self, other: object):
         if isinstance(other, InventoryItem) and self.name == other.name:
-            return self.quentity > other.quentity
-        raise ValueError("cannot add items of tifferent types")
+            return self.quantity > other.quantity
+        raise ValueError("cannot add items of different types")
 
 
 item_1 = InventoryItem("apple", 40)

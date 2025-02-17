@@ -13,9 +13,9 @@ class MyIterator:
         if self.start >= self.end:
             raise StopIteration
         else:
-            currnet = self.start
+            current = self.start
             self.start += 1
-            return currnet
+            return current
 
 
 nums = MyIterator(1, 10)
@@ -26,6 +26,7 @@ while True:
     """for nums in num:
             print(num)"""
     nums = MyIterator(1, 10)
+    
     try:
         item = next(nums)
         print(item)

@@ -1,6 +1,6 @@
 from abc import ABC
 
-"""Polimorphism is using same function for handle differnet purpose"""
+"""Polymorphism is using same function for handle different purpose"""
 
 
 class Vehicle(ABC):

@@ -4,9 +4,9 @@ from typing import Iterator, Any
 """
 abs(), any(), all(), ascci(), bin(), bool(), callable(), complex(),  dict()
 
-dir(), divmod(), enumerate(), eval(), exec(), filet(), float(), help(), isinstence()
+dir(), divmod(), enumerate(), eval(), exec(), filet(), float(), help(), isinstance()
 
-issublcass(), iter(), len(), list(), map(), min(), max(), open(), ord(), pow(), print()
+issubclass(), iter(), len(), list(), map(), min(), max(), open(), ord(), pow(), print()
 
 range(), zip(), type(), tuple(), sum(), str(), sorted(), slice(), set(), round(), reverse(),
 
@@ -50,7 +50,7 @@ def any_func() -> None:
 
 
 # ascii() When you want to include characters that are outside the ASCII range
-def ascii_funct():
+def ascii_func():
     print(ascii("®"))
 
 
@@ -119,7 +119,7 @@ def enumerate_func():
     print(list(enumeration))
 
 
-# eval() evaluationg cod
+# eval() evaluating code
 def eval_func() -> None:
     text: str = input("")
     print(eval(text))
@@ -393,7 +393,7 @@ if __name__ == "__main__":
     # abs_func()
     # all_func()
     # any_func()
-    # ascii_funct()
+    # ascii_func()
     # bin_func()
     # bool_func()
     # callable_func()

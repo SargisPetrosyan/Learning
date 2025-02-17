@@ -1,7 +1,7 @@
 from abc import ABC, staticmethod
 
 
-# Vhicle abstract class
+# Vehicle abstract class
 class Vehicle(ABC):
     @staticmethod
     def model():
@@ -16,9 +16,9 @@ class Car(Vehicle):
         return "BMW"
 
 
-class Motobike(Vehicle):
+class Motorbike(Vehicle):
     def __init__(self) -> None:
-        self.name = "Motobike"
+        self.name = "Motorbike"
 
     def model(self) -> str:
         return "Mercedes"
@@ -27,7 +27,7 @@ class Motobike(Vehicle):
 class VehicleFactory:
     @staticmethod
     def create_vehicle(vehicle_type: str) -> Vehicle:
-        vehicles = {"Car": Car, "Motobike": Motobike}
+        vehicles = {"Car": Car, "Motorbike": Motorbike}
         if vehicle_type in vehicles:
             return vehicles[vehicle_type]()
         else:
