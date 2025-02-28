@@ -16,7 +16,15 @@ class House:
 
 
 class HouseBuilder:
-    """builder class that building House class part by part"""
+    """
+    The Builder Pattern separates the construction of a complex object from its representation, 
+    allowing the same construction process to create different representations.
+
+    Why use it?
+    - Allows for the creation of complex objects step by step.
+    - Provides a fluent interface, making it easy to construct objects with many parameters.
+    - Promotes immutability by constructing objects incrementally and providing them once fully built.
+    """
 
     def __init__(self):
         self.window: str = None
@@ -52,31 +60,30 @@ class HouseBuilder:
                 roof={self.roof}, noise_protect={self.noise_protect})"
 
     def __str__(self):
-        return f"HouseBuilder class to create House clase"
+        return f"HouseBuilder class to create House case"
 
 
-# Building process step by step you can seperate object creation process
+# Building process step by step you can separate object creation process
 house_1 = HouseBuilder()
-house_1.set_door("mettal").set_window("duble")
+house_1.set_door("metal").set_window("dubhe")
 house_1.set_roof("flat").set_noise_protect(True)
 
-# this will return HouseBuild method becouse built() function wasnt called
+# this will return HouseBuild method because built() function wasn't called
 print(house_1)
-
 house = house_1.built()
 
-# this will return House object becouse built() is calling House() class
+# this will return House object because built() is calling House() class
 print(house)
 
 
 # Director class controlling building process you can set some sample of Houses
 class Director:
     def __init__(self, builder):
-        self.biuilder = builder
+        self.builder = builder
 
     # sample of one story house
     def one_story_house(self):
-        self.biuilder.set_window("duble").set_door("dubble").set_roof(
+        self.builder.set_window("dubhe").set_door("dabble").set_roof(
             "flat"
         ).set_noise_protect(True).built()
 
