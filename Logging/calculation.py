@@ -26,7 +26,6 @@ def add(x: int | float, y: int | float):
 def subtract(x: int | float, y: int | float):
     return x - y
 
-
 def multiply(x: int | float, y: int | float):
     return x * y
 
