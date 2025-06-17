@@ -22,27 +22,27 @@ def abs_func() -> None:
     y: int = -3
     z: float = -2.45
 
-    print(abs(x))
-    print(abs(y))
-    print(abs(z))
+    print(abs(x)) # output: 3
+    print(abs(y)) # output: 3
+    print(abs(z)) # output: 2
 
 
-# all() return True if all of volues in list are True.
+# all() return True if all of voles in list are True.
 def all_func() -> None:
     voult1: list[int] = [1, 1, 1, 1, 1]
     voult2: list[int] = [1, 1, 1, 1, 0]
     voult3: list[int] = [0, 0, 0, 0, 0]
 
-    print(all(voult1))
-    print(all(voult2))
-    print(all(voult3))
+    print(all(voult1)) # output True
+    print(all(voult2)) # output False
+    print(all(voult3)) # output True
 
 
-# any() return True if any of volues in list are True
+# any() return True if any of voles in list are True
 def any_func() -> None:
-    voult1: list[int] = [1, 1, 1, 1, 1]
-    voult2: list[int] = [1, 1, 1, 1, 0]
-    voult3: list[int] = [0, 0, 0, 0, 0]
+    voult1: list[int] = [1, 1, 1, 1, 1] # output True
+    voult2: list[int] = [1, 1, 1, 1, 0] # output True
+    voult3: list[int] = [0, 0, 0, 0, 0] # output False
 
     print(any(voult1))
     print(any(voult2))
@@ -51,10 +51,10 @@ def any_func() -> None:
 
 # ascii() When you want to include characters that are outside the ASCII range
 def ascii_func():
-    print(ascii("®"))
+    print(ascii("®")) # output \xae
 
 
-# represent character with binery code
+# represent character with binary code
 def bin_func() -> None:
     print(bin(1))
     print(bin(10))
@@ -393,7 +393,7 @@ if __name__ == "__main__":
     # abs_func()
     # all_func()
     # any_func()
-    # ascii_func()
+    ascii_func()
     # bin_func()
     # bool_func()
     # callable_func()
@@ -433,4 +433,4 @@ if __name__ == "__main__":
     # sum_func()
     # tuple_func()
     # type_func()
-    zip_func()
+    # zip_func()

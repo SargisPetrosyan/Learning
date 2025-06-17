@@ -75,7 +75,6 @@ house = house_1.built()
 # this will return House object because built() is calling House() class
 print(house)
 
-
 # Director class controlling building process you can set some sample of Houses
 class Director:
     def __init__(self, builder):
