@@ -2,39 +2,6 @@ version = 1
 requires-python = ">=3.13"
 
 [[package]]
-<<<<<<< HEAD
-name = "cmdkit"
-version = "2.7.7"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/a9/8d/0483d6018a5293ef74889ee132b243d34c324be19378acb93341bbefb43b/cmdkit-2.7.7.tar.gz", hash = "sha256:afe20b60ee60658e299dba465248b74c1801bfe24f891ef745b3a6810251c280", size = 23225 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/23/62/c82680c31dc2dcfa55918a28720d2e5695cbb4e778b621416d12883203cd/cmdkit-2.7.7-py3-none-any.whl", hash = "sha256:9dfb1ae63329d0ce1970886206ef14a9773d5ebcc15608c96df119bc82abf023", size = 26819 },
-]
-
-[[package]]
 name = "learning"
 version = "0.1.0"
 source = { virtual = "." }
-dependencies = [
-    { name = "names-generator" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "names-generator", specifier = ">=0.2.0" }]
-
-[[package]]
-name = "names-generator"
-version = "0.2.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "cmdkit" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/fd/de/60c26d1488db2ffdb050d2c0e6007998c2afd90760a4d7b23d32cde5b446/names_generator-0.2.0.tar.gz", hash = "sha256:de60e354b8ca8f2d1ce0816079d3ba569417371867b94328021f03c9dd47a5be", size = 27106 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/bf/3d/7210fc4b1999771b875d96ffa30cf4384c7fe8f0a7d9874df4b753b7703e/names_generator-0.2.0-py3-none-any.whl", hash = "sha256:693e8e48e9a54a2a8f714b01d1bd70945743a15d4587059e7e4e16efc361be11", size = 26699 },
-]
-=======
-name = "learning"
-version = "0.1.0"
-source = { virtual = "." }
->>>>>>> ce88fb6ab92686a5475ac57e32928a69d1e1ea41
