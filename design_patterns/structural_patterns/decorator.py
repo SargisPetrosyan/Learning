@@ -11,50 +11,49 @@ In this implementation:
 This pattern promotes flexibility by allowing functionality to be combined at runtime, reducing the need for many subclasses.
 """
 
+
 class Character(ABC):
     def get_description(self):
-        return 'warrior'
-    
+        return "warrior"
+
     def get_damage(self):
         return 50
 
 
-class CharacterDecorator(Character,ABC):
-    def __init__(self,character):
+class CharacterDecorator(Character, ABC):
+    def __init__(self, character):
         self._character = character
-        
+
     def get_description(self):
         pass
-    
+
     def get_damage(self):
         pass
-    
+
 
 class FireWarrior(CharacterDecorator):
     def get_description(self):
-        return self._character.get_description() + 'with fire'
-    
+        return self._character.get_description() + "with fire"
+
     def get_damage(self):
         return self._character.get_damage() + 10
-    
-    
+
+
 class ColdWarrior(CharacterDecorator):
     def get_description(self):
-        return self._character.get_description() + 'with ice'
-    
+        return self._character.get_description() + "with ice"
+
     def get_damage(self):
         return self._character.get_damage() + 30
-    
-    
+
+
 class ShieldWarrior(CharacterDecorator):
     def get_description(self):
-        return self._character.get_description() + 'Shield'
-    
+        return self._character.get_description() + "Shield"
+
     def get_damage(self):
         return self._character.get_damage() - 10
-    
-    
-    
+
 
 warrior_1 = Character()
 fire_warrior = FireWarrior(warrior_1)
