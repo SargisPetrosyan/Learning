@@ -17,7 +17,7 @@ class House:
 
 class HouseBuilder:
     """
-    The Builder Pattern separates the construction of a complex object from its representation, 
+    The Builder Pattern separates the construction of a complex object from its representation,
     allowing the same construction process to create different representations.
 
     Why use it?
@@ -74,6 +74,7 @@ house = house_1.built()
 
 # this will return House object because built() is calling House() class
 print(house)
+
 
 # Director class controlling building process you can set some sample of Houses
 class Director:

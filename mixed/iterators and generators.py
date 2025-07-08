@@ -26,7 +26,7 @@ while True:
     """for nums in num:
             print(num)"""
     nums = MyIterator(1, 10)
-    
+
     try:
         item = next(nums)
         print(item)

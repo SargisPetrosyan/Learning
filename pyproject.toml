@@ -4,10 +4,7 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-<<<<<<< HEAD
 dependencies = [
-    "names-generator>=0.2.0",
+    "mypy>=1.16.1",
+    "ruff>=0.12.2",
 ]
-=======
-dependencies = []
->>>>>>> ce88fb6ab92686a5475ac57e32928a69d1e1ea41
