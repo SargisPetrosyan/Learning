@@ -22,18 +22,18 @@ nums = MyIterator(1, 10)
 
 
 # doing same as for loop
-while True:
-    """for nums in num:
-            print(num)"""
-    nums = MyIterator(1, 10)
-
-    try:
-        item = next(nums)
-        print(item)
-    except StopIteration:
-        break
-
-print(dir(MyIterator))
+# while True:
+#     """for nums in num:
+#             print(num)"""
+#     nums = MyIterator(1, 10)
+# 
+#     try:
+#         item = next(nums)
+#         print(item)
+#     except StopIteration:
+#         break
+# 
+# print(dir(MyIterator))
 
 
 def generator(start):
@@ -43,8 +43,19 @@ def generator(start):
         yield current
         current += 1
 
+# 
+# nums = generator(1)
+# 
+# for num in nums:
+#     print(num)
 
-nums = generator(1)
+def devide(number:int) -> int:
+    devided = number
+    iter = 0
+    while devided / 2 > 2:
+        iter +=1
+        devided /=2
+    return iter
 
-for num in nums:
-    print(num)
+result = devide(17)
+print(result)
