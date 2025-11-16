@@ -1,5 +1,4 @@
 import ctypes
-from tkinter import NO
 from typing import Any
 
 class DynamicArray():
@@ -21,7 +20,14 @@ class DynamicArray():
             self._resize(2*self._capacity)
         self._array[self._size] = obj
         self._size += 1
-        
+    
+    def pop(self):
+        if self._size == 0:
+            raise IndexError("cant pop from empty list")
+        pop_value = self._array[-1]
+        self._array[-1] = None
+        return pop_value
+    
     def _resize(self,capacity:int)->None :
         new_array: ctypes.Array[ctypes.py_object[Any]] = self._make_array(capacity)
         for k in range(self._size):
@@ -32,18 +38,3 @@ class DynamicArray():
     def _make_array(self,c:int) -> ctypes.Array[ctypes.py_object]:
         return(c*ctypes.py_object)()
     
-        
-    
-    
-dinamic_array = DynamicArray()
-
-dinamic_array.append(3)
-dinamic_array.append(4)
-dinamic_array.append(5)
-dinamic_array.append(6)
-dinamic_array.append(7)
-dinamic_array.append(3)
-dinamic_array.append(3)
-dinamic_array.append(3)
-print(len(dinamic_array))
-print(dinamic_array[0])
